@@ -182,29 +182,58 @@ list2
 
 ## **TASK-5** - Задание фактора:
 
+** Создать фактор с тремя уровнями «baby», «child», «adult»**
+
 * Функция `factor` - формирует ранговый вектор, который содержит коды определеннных признаков
 * Функция `levels` - формирует вектор признаков
+
 * Зададим обычный вектор (значения будут упорядочены по алфавиту):
 
 ```
 vsign<-c("baby","child","child","adult","baby","adult","baby","adult","child","adult","adult") 
-
 f1<-factor(vsign)
-levels = f1
-levels
+f1
 ```
 ```
 [1] baby child child adult baby adult baby adult child adult adult
 Levels: adult baby child
 ```
+
 * Для того чтобы получить значения признаков в нужном порядке:
 ```
+vsign<-c("baby","child","child","adult","baby","adult","baby","adult","child","adult","adult") 
 f2<-factor(vsign,levels=c("baby","child","adult"))
-levels = f2
-levels
+f2
 ```
 ```
 [1] baby child child adult baby adult baby adult child adult adult
 Levels: baby child adult
 ```
 
+## **TASK-6** - Задание индексов и поиск кол-ва значений вектора
+
+**Знайти:**
+* Индекс первого значения NA в векторе 1, 2, 3, 4, NA, 6, 7, NA, 9, NA, 11
+* Количество значений NA
+
+* NA - not available(нет в наличии) - пропущенные данные
+* Функция is.na(x) - проверяет вектор на ко-во пропущенных значений
+* Функция match(x,y) - сопоставляет значение обЪекта x со значением обЪекта y
+* и возвращает порядковый номер первого из совпадающих значений
+* Функция sum(x) - сума значений вектора x
+
+```
+v15<-c(1, 2, 3, 4, NA, 6, 7, NA, 9, NA, 11)
+i1<-match(NA,v15)
+i1
+```
+```
+[1] 5
+```
+```
+qelement_NA1<-sum(is.na(v15))
+qelement_NA1
+```
+```
+[1] 3
+```
