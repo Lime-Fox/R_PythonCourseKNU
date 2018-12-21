@@ -131,11 +131,12 @@ dim(v7)
 ```
 
 ## **TASK-4** - Задание списков:
+
 ```ПУНКТ 1```
 
 **Создадим список на основе базовых типов данных, (TASK-1):**
 ```
-list1 <- list(dt_integer,dt_numeric,dt_character,dt_complex,dt_logical)
+list1 <- list(dt_integer, dt_numeric, dt_complex, dt_logical, dt_character)
 list1
 ```
 ```
@@ -154,6 +155,9 @@ list1
 [[5]]
 [1] TRUE
 ```
+
+```ПУНКТ 2```
+
 **Создадим список на основе нижеприведенных данных:**
 ```
 list2 <- list(1:5,c(1,2,3,4,5),c(1+1i,1+2i,1+3i,1+4i,1+5i),c(TRUE,FALSE),c('HELLO!'))
