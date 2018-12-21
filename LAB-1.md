@@ -7,6 +7,3 @@
 * LAB-4
 * LAB-5
 * LAB-6
-
-**PYTHON:**
-* LAB-1
