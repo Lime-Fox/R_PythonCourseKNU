@@ -179,3 +179,32 @@ list2
 [[5]]
 [1] "HELLO!"
 ```
+
+## **TASK-5** - Задание фактора:
+
+* Функция `factor` - формирует ранговый вектор, который содержит коды определеннных признаков
+* Функция `levels` - формирует вектор признаков
+* Зададим обычный вектор (значения будут упорядочены по алфавиту):
+
+```
+vsign<-c("baby","child","child","adult","baby","adult","baby","adult","child","adult","adult") 
+
+f1<-factor(vsign)
+levels = f1
+levels
+```
+```
+[1] baby child child adult baby adult baby adult child adult adult
+Levels: adult baby child
+```
+* Для того чтобы получить значения признаков в нужном порядке:
+```
+f2<-factor(vsign,levels=c("baby","child","adult"))
+levels = f2
+levels
+```
+```
+[1] baby child child adult baby adult baby adult child adult adult
+Levels: baby child adult
+```
+
