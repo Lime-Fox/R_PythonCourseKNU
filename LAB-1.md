@@ -239,3 +239,56 @@ qelement_NA1
 ```
 [1] 3
 ```
+##  **TASK-7** - Задание data frame + изменение названий строк/столбцов фрейма
+
+**Создать произвольный data frame и вывести в консоль**
+
+```
+По сути, представляют из себя списки и таблицы)
+Функция data.frame() - задает массив данных различных типов
+Функция names(data.frame())[№ Столбца] - переименование названия столбца
+Функция rownames() - переименование названий строк фрейма
+Функция colnames() - переименование названий столбцов фрейма
+```
+```
+СПОСОБ 1 - Заданы только названия столбцов
+```
+```
+Name<-c("Anna","Mary","Jane")
+Subject<-c("A","B","C")
+Mark<-c(95,82,74)
+SUCCESS<-data.frame(Name,Subject,Mark)
+SUCCESS
+```
+```
+Name    Subject Mark
+1 Anna       A   95
+2 Mary       B   82
+3 Jane       C   74
+```
+```
+СПОСОБ 2 - Заданы названия строк и столбцов
+```
+```
+SUCCESS <- data.frame(c("Anna","Mary","Jane"), c("A","B","C"), c(95, 82, 74))
+rownames(SUCCESS) <- c("№1","№2","№3")
+colnames(SUCCESS)<-c("NAME","SUBJECT","MARK")
+SUCCESS
+```
+```
+   NAME  SUBJECT MARK
+№1 Anna       A   95
+№2 Mary       B   82
+№3 Jane       C   74
+```
+```
+rownames(SUCCESS)[1]<-"WINNER"
+colnames(SUCCESS)[1]<-"FIRST NAME"
+SUCCESS
+```
+```
+FIRST NAME   SUBJECT MARK
+WINNER       Anna       A   95
+№2           Mary       B   82
+№3           Jane       C   74
+```
