@@ -233,7 +233,10 @@ sel.col1
 ```
 [1] 10
 ```
+
 * Вывести столбец сс, включая название:
+
+> СПОСОБ 1
 ```
 Функция `subset(x, ...)` - отфильтровывает и возвращает ту часть объекта х, 
 которая соответствует заданому условию.
@@ -345,6 +348,19 @@ subset (SYMBOL, select=cc)
 98   q
 99   v
 100  o
+```
+
+> СПОСОБ 2
+```
+`ИМЯ-DATA-FRAME$ИМЯ-СТОЛБЦА` - выводит столбец (строкой), а также выделяет levels
+```
+```
+SYMBOL$cc
+```
+```
+[1] x u w v x b x s p g v t j u c q d o p r v s l x o f l i h g z b s p d b s s b w d e b g o r o t v v l u e o
+[55] i d l x s p f a b g g a n k s h f d z o q a e q d s y u a h m x l n m a c q n o u n r q v o
+Levels: a b c d e f g h i j k l m n o p q r s t u v w x y z
 ```
 
 ## **TASK-3**
