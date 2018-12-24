@@ -85,7 +85,7 @@ my_ifelse (c(1,2,3,4,5,6,7,8,9,10),"<=",5)
 > Пропишем алгоритм работы функции:
 ```
 columnmean <- function(x, removeNA=TRUE)
-{return (newcol(x, na.rm=removeNA))}
+{return (colMeans(x, na.rm=removeNA))}
 ```
 Используем данную функцию для рассчета среднего значения (mean)
 для каждого столбца произвольной матрицы или data frame:  
