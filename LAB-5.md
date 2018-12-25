@@ -25,6 +25,50 @@ pmean("specdata", "sulfate", 55)
 pmean("specdata", "nitrate")
 ## [1] 1.702932
 ```
+```
+FILE.NORM <- function(name) {
+  l.num <- 3L
+  name <- paste('000', name, sep = '')
+  
+  return(paste(substr(
+    name,
+    nchar(name) - l.num + 1,
+    nchar(name)
+  ), '.csv', sep = ''))
+}
+
+pmean <- function(directory, pollutant, id = c(1:332)) {
+    way <-
+    paste('C:/Users/USER/data/', directory, '/', sep = "")
+    values <- c()
+  
+  for (i in id) {
+    f.rep <-
+      read.csv(file = paste(way, FILE.NORM(i), sep = ""))
+      cn <- colnames(f.rep)
+    
+    if (pollutant %in% cn) {
+      values <- c(values, f.rep[, pollutant, drop = TRUE])
+    }
+  }
+  return(mean(values, na.rm = TRUE))
+}
+
+#ПРОВЕРКА:
+
+t1 <- pmean("specdata", "sulfate", 1:10)
+t1
+t2 <- pmean("specdata", "sulfate", 55)
+t2
+t3 <- pmean("specdata", "nitrate")
+t3
+```
+```
+[1] 4.064128
+[1] 3.587319
+[1] 1.702932
+```
+
 
 ## **TASK-2**
 
