@@ -109,6 +109,61 @@ complete("specdata", 50:60)
 ## 10 59 445
 ## 11 60 448
 ```
+```
+complete <- function(directory, id) {
+    way <-
+    paste('C:/Users/USER/data/', directory, '/', sep = "")
+    d.base <- data.frame(filename = character(), count = integer())
+  
+  for (i in id) {
+    sup.file<- NEW.FILE(i)
+    
+    rf <-
+      read.csv(file = paste(way, sup.file, sep = ""))
+    
+      ad.plus <- sum(!is.na(rf['nitrate'] & rf['sulfate']))
+    
+      form.vec <- list(id = sup.file, nobs = ad.plus)
+      d.base = rbind(d.base, form.vec, stringsAsFactors = FALSE)
+  }
+  
+  return(d.base)
+}
+
+#ПРОВЕРКА:
+
+a <- complete("specdata", 1)
+a
+b <- complete("specdata", c(2, 4, 8, 10, 12))
+b
+c <- complete("specdata", 50:60)
+c
+```
+```
+        id nobs
+1 001.csv  117
+
+        id nobs
+1 002.csv 1041
+2 004.csv  474
+3 008.csv  192
+4 010.csv  148
+5 012.csv   96
+
+        id nobs
+1  050.csv  459
+2  051.csv  193
+3  052.csv  812
+4  053.csv  342
+5  054.csv  219
+6  055.csv  372
+7  056.csv  642
+8  057.csv  452
+9  058.csv  391
+10 059.csv  445
+11 060.csv  448
+```
+
 
 ## **TASK-3**
 
