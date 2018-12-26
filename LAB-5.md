@@ -37,6 +37,7 @@ NEW.FILE <- function(name) {
   ), '.csv', sep = ''))
 }
 
+#РЕАЛИЗАЦИЯ:
 pmean <- function(directory, pollutant, id = c(1:332)) {
     way <-
     paste('C:/Users/USER/data/', directory, '/', sep = "")
@@ -56,7 +57,6 @@ pmean <- function(directory, pollutant, id = c(1:332)) {
 
 
 #ПРОВЕРКА:
-
 t1 <- pmean("specdata", "sulfate", 1:10)
 t1
 t2 <- pmean("specdata", "sulfate", 55)
@@ -110,6 +110,7 @@ complete("specdata", 50:60)
 ## 11 60 448
 ```
 ```
+#РЕАЛИЗАЦИЯ:
 complete <- function(directory, id) {
     way <-
     paste('C:/Users/USER/data/', directory, '/', sep = "")
@@ -131,7 +132,6 @@ complete <- function(directory, id) {
 }
 
 #ПРОВЕРКА:
-
 a <- complete("specdata", 1)
 a
 b <- complete("specdata", c(2, 4, 8, 10, 12))
@@ -216,6 +216,7 @@ length(cr)
 ```
 
 ```
+#РЕАЛИЗАЦИЯ:
 corr <- function(directory, threshold = 0) {
     way <-
     paste('C:/Users/USER/data/', directory, '/', sep = "")
@@ -242,7 +243,6 @@ corr <- function(directory, threshold = 0) {
 ```
 ```
 # ПРОВЕРКА: 
-
 cr1 <- corr("specdata", 150)
 cr1
 cr11 <- head(cr1)
