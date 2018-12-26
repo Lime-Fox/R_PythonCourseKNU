@@ -9,4 +9,4 @@
 * R-LAB-6
 
 **PYTHON:**
-* Lab_python.ipynb
+* PYTHON-LAB-1
