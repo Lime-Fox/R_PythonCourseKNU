@@ -1,12 +1,12 @@
 **THIS FILE CONTAINS [6 R-LABS] AND [1 PYTHON-LAB]:**
 ***
 **R-STATISTICA:**
-* LAB-1 (R)
-* LAB-2 (R)
-* LAB-3 (R)
-* LAB-4 (R)
-* LAB-5 (R)
-* LAB-6 (R)
+* R-LAB-1
+* R-LAB-2
+* R-LAB-3
+* R-LAB-4
+* R-LAB-5
+* R-LAB-6
 
 **PYTHON:**
-* LAB-1 (PYTHON)
+* PYTHON-LAB-1
