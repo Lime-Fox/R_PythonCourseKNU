@@ -1,1 +1,51 @@
+## PYTHON-LAB-1
+** **
+```
+ДЛЯ ВЫПОЛНЕНИЯ ДАННОЙ ЛАБ.РАБОТЫ НЕОБХОДИМО:
+
+1. - PYTHON ANACONDA
+2. - Файл Lab_Python.ipynb
+     (Инструкции по выполнению - написать 8 функций )
+3. - Файл Python_materials.zip
+     (дополнительные наборы данных)
+```
+```
+import pandas as pd
+
+df = pd.read_csv('olympics.csv', index_col=0, skiprows=1)
+
+for col in df.columns:
+    if col[:2]=='01':
+        df.rename(columns={col:'Gold'+col[4:]}, inplace=True)
+    if col[:2]=='02':
+        df.rename(columns={col:'Silver'+col[4:]}, inplace=True)
+    if col[:2]=='03':
+        df.rename(columns={col:'Bronze'+col[4:]}, inplace=True)
+    if col[:1]=='№':
+        df.rename(columns={col:'#'+col[1:]}, inplace=True)
+
+names_ids = df.index.str.split('\s\(') # split the index by '('
+
+df.index = names_ids.str[0] # the [0] element is the country name (new index) 
+df['ID'] = names_ids.str[1].str[:3] # the [1] element is the abbreviation or ID (take first 3 characters from that)
+
+df = df.drop('Totals')
+df.head()
+
+# In[ ]:
+
+GOLD_S = 'Gold'
+GOLD_W = 'Gold.1'
+GOLD_G = 'Gold.2'
+SILVER_G = 'Silver.2'
+BRONZE_G = 'Bronze.2'
+POINTS = 'Points'
+SUMLEV = "SUMLEV"
+STNAME = 'STNAME'
+CTYNAME = 'CTYNAME'
+MIN = 'Min'
+MAX = 'Max'
+REGION = "REGION"
+POPESTIMATE_ARRAY = ["POPESTIMATE2010", "POPESTIMATE2011", "POPESTIMATE2012", "POPESTIMATE2013", "POPESTIMATE2014", "POPESTIMATE2015"
+```
 
