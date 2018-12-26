@@ -131,7 +131,8 @@ complete <- function(directory, id) {
   
   return(d.base)
 }
-
+```
+```
 #ПРОВЕРКА:
 a <- complete("specdata", 1)
 a
