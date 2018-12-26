@@ -36,7 +36,8 @@ NEW.FILE <- function(name) {
     nchar(name)
   ), '.csv', sep = ''))
 }
-
+```
+```
 #РЕАЛИЗАЦИЯ:
 pmean <- function(directory, pollutant, id = c(1:332)) {
     way <-
@@ -54,8 +55,8 @@ pmean <- function(directory, pollutant, id = c(1:332)) {
   }
   return(mean(cifra, na.rm = TRUE))
 }
-
-
+```
+```
 #ПРОВЕРКА:
 t1 <- pmean("specdata", "sulfate", 1:10)
 t1
